@@ -24,15 +24,20 @@ class UserBar extends StatelessWidget {
               children: [
                 Text(
                   "Hello $userName!",
-                  style: TextStyle(
-                      color: Theme.of(context).textTheme.bodyLarge?.color, fontSize: 25),
+                  style: const TextStyle(color: Colors.white, fontSize: 25),
                   overflow: TextOverflow.ellipsis,
                 ),
-                Text(
-                  "You are at: $userLocation",
-                  style: TextStyle(
-                      color: Theme.of(context).textTheme.bodyMedium?.color, fontSize: 15),
-                  overflow: TextOverflow.ellipsis,
+                Row(
+                  children: [
+                    const Icon(Icons.location_on, color: Colors.white, size: 15),
+                    Flexible(
+                      child: Text(
+                        userLocation,
+                        style: const TextStyle(color: Colors.white, fontSize: 15),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

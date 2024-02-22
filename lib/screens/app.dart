@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import 'sender_screen.dart';
 
 class App extends StatelessWidget {
@@ -7,14 +8,12 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SenderScreen(),
+      // TODO: Update this according to user position
+      home: SenderScreen(currentLocation: "VietNam, Pekistan, Whatever you want!"),
       theme: ThemeData(
         primaryColor: const Color.fromARGB(255, 26, 37, 48),
         hintColor: const Color.fromARGB(255, 91, 158, 225),
-        textTheme: const TextTheme(
-          bodyLarge: TextStyle(color: Colors.white, fontSize: 25),
-          bodyMedium: TextStyle(color: Colors.white, fontSize: 15),
-        ),
+        unselectedWidgetColor: const Color.fromARGB(255, 26, 37, 48),
       ),
     );
   }
